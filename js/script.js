@@ -1,4 +1,3 @@
-
 const popupEl = document.querySelector('.popup');
 const popupCloseButtonEl = document.querySelector('.popup__close-button');
 const leadTitleEl = document.querySelector('.form__button');
@@ -6,8 +5,8 @@ const profileTitle = document.querySelector('.profile__title');
 const profileText = document.querySelector('.profile__text');
 
 const formElement = popupEl.querySelector('.popup__form');
-const nameInput = formElement.querySelector('.form__input--name--title');
-const jobInput = formElement.querySelector('.form__input--name--subtitle');
+const nameInput = formElement.querySelector('.form__input-name-title');
+const jobInput = formElement.querySelector('.form__input-name-subtitle');
 
 function openPopup() {
     popupEl.classList.add('popup_opened');
