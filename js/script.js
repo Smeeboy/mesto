@@ -5,8 +5,8 @@ const profileTitle = document.querySelector('.profile__title');
 const profileText = document.querySelector('.profile__text');
 
 const formElement = popupEl.querySelector('.popup__form');
-const nameInput = formElement.querySelector('.popup_input-name-title');
-const jobInput = formElement.querySelector('.popup__input-name-subtitle');
+const nameInput = formElement.querySelector('.form__input-name-title');
+const jobInput = formElement.querySelector('.form__input-name-subtitle');
 
 function openPopup() {
     popupEl.classList.add('popup_opened');
