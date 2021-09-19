@@ -1,0 +1,7 @@
+@media screen and (min-width: 640px) {
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

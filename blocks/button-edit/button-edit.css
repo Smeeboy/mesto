@@ -1,0 +1,18 @@
+.button-edit {
+    background-image: url("../../../images/Edit-button.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    background-color: black;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 640px) {
+    .button-edit  {
+        margin-left: 0;
+    }
+}
+

@@ -1,0 +1,38 @@
+.button-like {
+    background-image: url("../../images/like-disabled.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 19px;
+    border: none;
+    background-color: white;
+    align-self: center;
+    cursor: grab;
+}
+
+.button-like:hover {
+    background-image: url("../../images/like-disabled.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 19px;
+    border: none;
+    background-color: white;
+    align-self: center;
+    cursor: grab;
+    opacity: .5;
+    transition: 0.4 ease-out;
+}
+
+.button-like:active {
+    background-image: url("../../images/like.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 19px;
+    background-color: white;
+    align-self: center;
+    cursor: grab;
+    opacity: 1;
+    transition: 0.4 ease-out;
+}

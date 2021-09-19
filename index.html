@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./pages/index.css" />
+        <title>Жак-Ив Кусто</title>
+    </head>
+    <body class="page">
+        <header class="header page__container">
+            <img
+                class="header__logo"
+                src="./images/header__logo.svg"
+                alt="Лого"
+            />
+            <div class="header__line"></div>
+        </header>
+
+        <section class="page__container profile">
+            <img
+                class="profile__image"
+                src="./images/profile__image.svg"
+                alt="Жак-Ив Кусто"
+            />
+            <div class="profiles">
+                <div class="profile__edit">
+                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <button class="button-edit" onclick="openPopup()"></button>
+                </div>
+                <h2 class="profile__text">Исследователь океана</h2>
+            </div>
+            <button class="button-add"></button>
+        </section>
+
+        <section class="page__container cards">
+            <div class="card">
+                <picture class="card__pic">
+                    <img
+                        class="card__image"
+                        alt="Куршская коса"
+                        src="./images/photo-grid__image-karachaevo.jpeg"
+                    />
+                </picture>
+                <div class="card__like">
+                    <h2 class="card__title">Куршская коса</h2>
+                    <button class="button-like"></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <picture class="card__pic">
+                    <img
+                        class="card__image"
+                        alt="Санкт-Петербург"
+                        src="./images/photo-grid__image-elbrus.jpeg"
+                    />
+                </picture>  
+                <div class="card__like">
+                    <h2 class="card__title">Санкт-Петербург</h2>
+                    <button class="button-like"></button>
+                </div>
+            </div>
+
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Домбай"
+                            src="./images/photo-grid__image-dombay.jpeg"
+                        />
+                    </picture>  
+                <div class="card__like">
+                    <h2 class="card__title">Домбай</h2>
+                    <button class="button-like"></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <picture class="card__pic">
+                    <img
+                        class="card__image"
+                        alt="Сахалин"
+                        src="./images/photo-grid__image-sakhalin.jpeg"
+                    />
+                </picture>  
+                <div class="card__like">
+                    <h2 class="card__title">Сахалин</h2>
+                    <button class="button-like"></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <picture class="card__pic">
+                    <img
+                        class="card__image"
+                        alt="Сочи"
+                        src="./images/photo-grid__image-sochi.jpeg"
+                    />
+                </picture>
+                <div class="card__like">
+                    <h2 class="card__title">Сочи</h2>
+                    <button class="button-like"></button>
+                </div>
+            </div>
+
+            <div class="card">
+                <picture class="card__pic">
+                    <img
+                        class="card__image"
+                        alt="Байкал>"
+                        src="./images/photo-grid__image-baikal.jpeg"
+                    />
+                </picture>
+                <div class="card__like">
+                    <h2 class="card__title">Байкал</h2>
+                    <button class="button-like"></button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page__container footer">&#169; 2020 Mesto Russia</footer>
+        <div class="popup">
+            <div class="popup__window">
+                <button type="button" class="popup__close-button"></button>
+                <form class="popup__form">
+                    <h2 class="form__title">Редактировать профиль</h2>
+                    <input
+                        class="form__input form__input--name--title"
+                        name="title"
+                        type="text"
+                    />
+                    <input
+                        class="form__input form__input--name--subtitle"
+                        name="subtitle"
+                        type="text"
+                    />
+                    <input
+                        class="form__button"
+                        value="Сохранить"
+                        type="submit"
+                    />
+                </form>
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
