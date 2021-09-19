@@ -20,7 +20,7 @@
     background-color: white;
     align-self: center;
     cursor: grab;
-    opacity: .5;
+    opacity: 0.5;
     transition: 0.4 ease-out;
 }
 
