@@ -13,6 +13,10 @@
     background-position: center;
 }
 
+.popup__close-button:hover {
+    opacity: .15;
+}
+
 @media screen and (min-width: 640px) {
     .popup__close-button {
         top: -40px;
