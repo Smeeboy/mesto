@@ -6,6 +6,7 @@
     height: 19px;
     border: none;
     background-color: white;
+    border: none;
     align-self: center;
     cursor: grab;
 }
@@ -20,7 +21,7 @@
     background-color: white;
     align-self: center;
     cursor: grab;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: 0.4 ease-out;
 }
 
