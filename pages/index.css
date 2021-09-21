@@ -9,11 +9,11 @@
 @import url(../blocks/button/_add/button_add.css);
 @import url(../blocks/button/_edit/button_edit.css);
 @import url(../blocks/button-like/button-like.css);
-/* @import url(../blocks/button/_like/button_like.css); */
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__line/header__line.css);
+@import url(../blocks/header/__body/header__body.css);
 
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);

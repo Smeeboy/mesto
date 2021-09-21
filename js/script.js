@@ -41,3 +41,7 @@ function formSubmitHandler (evt) {
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
+// popupEl.addEventListener('click', function (evt) {
+    
+//     popupEl.classList.remove('popup_opened')
+// });
