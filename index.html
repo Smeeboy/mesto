@@ -8,145 +8,188 @@
         <title>Жак-Ив Кусто</title>
     </head>
     <body class="page">
-        
-        <header class="header">
-            <div class="page__container header__body">
+        <div class="page__container">
+            <header class="header">
                 <img
                     class="header__logo"
                     src="./images/header__logo.svg"
                     alt="Лого"
                 />
-            </div>  
-            <div class="page__container header__line"></div>
-        </header>
-
-        <section class="page__container profile">
-            <img
-                class="profile__image"
-                src="./images/profile__image.svg"
-                alt="Жак-Ив Кусто"
-            />
-            <div class="profiles">
-                <div class="profile__edit">
-                    <h1 class="profile__title">Жак-Ив Кусто</h1>
-                    <button class="button button_edit" onclick="openPopup()"></button>
-                </div>
-                <h2 class="profile__text">Исследователь океана</h2>
-            </div>
-            <button class="button button_add"></button>
-        </section>
-
-        <section class="page__container cards">
-            <div class="card">
-                <picture class="card__pic">
-                    <img
-                        class="card__image"
-                        alt="Куршская коса"
-                        src="./images/photo-grid__image-karachaevo.jpeg"
-                    />
-                </picture>
-                <div class="card__like">
-                    <h2 class="card__title">Куршская коса</h2>
-                    <button class="button-like"></button>
-                </div>
-            </div>
-
-            <div class="card">
-                <picture class="card__pic">
-                    <img
-                        class="card__image"
-                        alt="Санкт-Петербург"
-                        src="./images/photo-grid__image-elbrus.jpeg"
-                    />
-                </picture>
-                <div class="card__like">
-                    <h2 class="card__title">Санкт-Петербург</h2>
-                    <button class="button-like"></button>
-                </div>
-            </div>
-
-            <div class="card">
-                <picture class="card__pic">
-                    <img
-                        class="card__image"
-                        alt="Домбай"
-                        src="./images/photo-grid__image-dombay.jpeg"
-                    />
-                </picture>
-                <div class="card__like">
-                    <h2 class="card__title">Домбай</h2>
-                    <button class="button-like"></button>
-                </div>
-            </div>
-
-            <div class="card">
-                <picture class="card__pic">
-                    <img
-                        class="card__image"
-                        alt="Сахалин"
-                        src="./images/photo-grid__image-sakhalin.jpeg"
-                    />
-                </picture>
-                <div class="card__like">
-                    <h2 class="card__title">Сахалин</h2>
-                    <button class="button-like"></button>
-                </div>
-            </div>
-
-            <div class="card">
-                <picture class="card__pic">
-                    <img
-                        class="card__image"
-                        alt="Сочи"
-                        src="./images/photo-grid__image-sochi.jpeg"
-                    />
-                </picture>
-                <div class="card__like">
-                    <h2 class="card__title">Сочи</h2>
-                    <button class="button-like"></button>
-                </div>
-            </div>
-
-            <div class="card">
-                <picture class="card__pic">
-                    <img
-                        class="card__image"
-                        alt="Байкал>"
-                        src="./images/photo-grid__image-baikal.jpeg"
-                    />
-                </picture>
-                <div class="card__like">
-                    <h2 class="card__title">Байкал</h2>
-                    <button class="button-like"></button>
-                </div>
-            </div>
-        </section>
-
-        <footer class="page__container footer">&#169; 2020 Mesto Russia</footer>
-        <div class="popup">
-            <div class="popup__window">
-                <button type="button" class="popup__close-button"></button>
-                <form class="popup__form form">
-                    <h2 class="form__title">Редактировать профиль</h2>
-                    <input
-                        class="form__input form__input-name-title"
-                        name="title"
-                        type="text"
-                    />
-                    <input
-                        class="form__input form__input-name-subtitle"
-                        name="subtitle"
-                        type="text"
-                    />
-                    <input
-                        class="form__button"
-                        value="Сохранить"
-                        type="submit"
-                    />
-                </form>
-            </div>
+            </header>
         </div>
+        <main>
+            <section class="page__container profile">
+                <img
+                    class="profile__image"
+                    src="./images/profile__image.jpeg"
+                    alt="Жак-Ив Кусто"
+                />
+                <div class="profiles">
+                    <div class="profile__edit">
+                        <h1 class="profile__title">Жак-Ив Кусто</h1>
+                        <button
+                            class="button button_edit"
+                            type="button"
+                            aria-label="Open"
+                            onclick="openPopup()"
+                        ></button>
+                    </div>
+                    <p class="profile__text">Исследователь океана</p>
+                </div>
+                <button
+                    class="button button_add"
+                    type="button"
+                    aria-label="Add"
+                ></button>
+            </section>
 
+            <section class="page__container cards">
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Куршская коса"
+                            src="./images/photo-grid__image-karachaevo.jpeg"
+                        />
+                    </picture>
+                    <div class="card__like">
+                        <h2 class="card__title">Куршская коса</h2>
+                        <button
+                            class="card__button-like"
+                            type="button"
+                        ></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Санкт-Петербург"
+                            src="./images/photo-grid__image-elbrus.jpeg"
+                        />
+                    </picture>
+                    <div class="card__like">
+                        <h2 class="card__title">Санкт-Петербург</h2>
+                        <button
+                            class="card__button-like"
+                            type="button"
+                            aria-label="Like"
+                        ></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Домбай"
+                            src="./images/photo-grid__image-dombay.jpeg"
+                        />
+                    </picture>
+                    <div class="card__like">
+                        <h2 class="card__title">Домбай</h2>
+                        <button
+                            class="card__button-like"
+                            type="button"
+                            aria-label="Like"
+                        ></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Сахалин"
+                            src="./images/photo-grid__image-sakhalin.jpeg"
+                        />
+                    </picture>
+                    <div class="card__like">
+                        <h2 class="card__title">Сахалин</h2>
+                        <button
+                            class="card__button-like"
+                            type="button"
+                            aria-label="Like"
+                        ></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Сочи"
+                            src="./images/photo-grid__image-sochi.jpeg"
+                        />
+                    </picture>
+                    <div class="card__like">
+                        <h2 class="card__title">Сочи</h2>
+                        <button
+                            class="card__button-like"
+                            type="button"
+                            aria-label="Like"
+                        ></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <picture class="card__pic">
+                        <img
+                            class="card__image"
+                            alt="Байкал>"
+                            src="./images/photo-grid__image-baikal.jpeg"
+                        />
+                    </picture>
+                    <div class="card__like">
+                        <h2 class="card__title">Байкал</h2>
+                        <button
+                            class="card__button-like"
+                            type="button"
+                            aria-label="Like"
+                        ></button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="page__container footer">
+                <p>&#169; 2020 Mesto Russia</p>
+            </footer>
+            <div class="popup">
+                <div class="popup__window">
+                    <button
+                        type="button"
+                        class="popup__close-button"
+                        aria-label="Close"
+                    ></button>
+                    <form class="popup__form form" name="form">
+                        <h2 class="form__title">Редактировать профиль</h2>
+                        <input
+                            class="form__input form__input-name-title"
+                            name="title"
+                            type="text"
+                            placeholder="Введите имя"
+                            required
+                        />
+                        <input
+                            class="form__input form__input-name-subtitle"
+                            name="subtitle"
+                            type="text"
+                            placeholder="Введите должность"
+                            required
+                        />
+
+                        <button
+                            class="form__button"
+                            value="Сохранить"
+                            type="submit"
+                        >
+                            Сохранить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
         <script src="./js/script.js"></script>
     </body>
 </html>
