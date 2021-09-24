@@ -1,4 +1,5 @@
 const popupEl = document.querySelector('.popup');
+const popupOpenButton = document.querySelector('.button_action_edit');
 const popupCloseButtonEl = document.querySelector('.popup__close-button');
 const pageEl = document.querySelector('.page');
 const leadTitleEl = document.querySelector('.form__button');
@@ -6,8 +7,8 @@ const profileTitle = document.querySelector('.profile__title');
 const profileText = document.querySelector('.profile__text');
 
 const formElement = popupEl.querySelector('.popup__form');
-const nameInput = formElement.querySelector('.form__input-name-title');
-const jobInput = formElement.querySelector('.form__input-name-subtitle');
+const nameInput = formElement.querySelector('.form__input_name_title');
+const jobInput = formElement.querySelector('.form__input_name_subtitle');
 
 function setPopupInputValue() {
     nameInput.value = profileTitle.textContent.trim();
@@ -16,13 +17,11 @@ function setPopupInputValue() {
 
 function openPopup() {
     popupEl.classList.add('popup_opened');
-    pageEl.classList.add('page_openpopup');
     setPopupInputValue();
 }
 
 function closePopup() {
     popupEl.classList.remove('popup_opened');
-    pageEl.classList.remove('page_openpopup');
 }
 
 function setProfileInputValue() {
@@ -36,7 +35,8 @@ function formSubmitHandler(evt) {
     closePopup ();
 }
 
-popupCloseButtonEl.addEventListener('click', closePopup)
+popupOpenButton.addEventListener('click', openPopup);
+popupCloseButtonEl.addEventListener('click', closePopup);
 formElement.addEventListener('submit', formSubmitHandler);
 // popupEl.addEventListener('click', function (evt) {
 

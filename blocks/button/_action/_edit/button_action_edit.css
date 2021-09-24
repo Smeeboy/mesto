@@ -1,5 +1,5 @@
-.button_edit {
-    background-image: url("../../../images/Edit-button.svg");
+.button_action_edit {
+    background-image: url("../../../../images/Edit-button.svg");
     width: 18px;
     height: 18px;
     border: 1px solid #fff;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (min-width: 640px) {
-    .button_edit {
+    .button_action_edit {
         margin-left: 0;
         width: 24px;
         height: 24px;

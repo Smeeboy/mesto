@@ -1,15 +1,14 @@
-.button_add {
-    background-image: url("../../../images/button__add.svg");
+.button_action_add {
+    background-image: url("../../../../images/button__add.svg");
     width: 100%;
     border: 2px solid white;
     height: 50px;
     background-color: transparent;
-    margin-top: 36px;
     border-radius: 2px;
 }
 
 @media screen and (min-width: 640px) {
-    .button_add {
+    .button_action_add {
         display: flex;
         justify-content: space-between;
         align-content: center;
@@ -18,7 +17,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .button_add {
+    .button_action_add {
         min-width: 150px;
     }
 }

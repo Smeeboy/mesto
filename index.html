@@ -8,15 +8,15 @@
         <title>Жак-Ив Кусто</title>
     </head>
     <body class="page">
-        <div class="page__container">
-            <header class="header">
+        <header class="header">
+            <div class="page__container header__container">
                 <img
                     class="header__logo"
                     src="./images/header__logo.svg"
                     alt="Лого"
                 />
-            </header>
-        </div>
+            </div>
+        </header>
         <main>
             <section class="page__container profile">
                 <img
@@ -24,22 +24,21 @@
                     src="./images/profile__image.jpeg"
                     alt="Жак-Ив Кусто"
                 />
-                <div class="profiles">
+                <div class="profile__container">
                     <div class="profile__edit">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
                         <button
-                            class="button button_edit"
+                            class="button button_action_edit"
                             type="button"
-                            aria-label="Open"
-                            onclick="openPopup()"
+                            aria-label="Открыть"
                         ></button>
                     </div>
                     <p class="profile__text">Исследователь океана</p>
                 </div>
                 <button
-                    class="button button_add"
+                    class="button button_action_add"
                     type="button"
-                    aria-label="Add"
+                    aria-label="Добавить"
                 ></button>
             </section>
 
@@ -146,50 +145,49 @@
                         <button
                             class="card__button-like"
                             type="button"
-                            aria-label="Like"
+                            aria-label="Поставить лайк"
                         ></button>
                     </div>
                 </div>
             </section>
-
-            <footer class="page__container footer">
-                <p>&#169; 2020 Mesto Russia</p>
-            </footer>
-            <div class="popup">
-                <div class="popup__window">
-                    <button
-                        type="button"
-                        class="popup__close-button"
-                        aria-label="Close"
-                    ></button>
-                    <form class="popup__form form" name="form">
-                        <h2 class="form__title">Редактировать профиль</h2>
-                        <input
-                            class="form__input form__input-name-title"
-                            name="title"
-                            type="text"
-                            placeholder="Введите имя"
-                            required
-                        />
-                        <input
-                            class="form__input form__input-name-subtitle"
-                            name="subtitle"
-                            type="text"
-                            placeholder="Введите должность"
-                            required
-                        />
-
-                        <button
-                            class="form__button"
-                            value="Сохранить"
-                            type="submit"
-                        >
-                            Сохранить
-                        </button>
-                    </form>
-                </div>
-            </div>
         </main>
+        <footer class="page__container footer">
+            <p class="footer__text">&#169; 2020 Mesto Russia</p>
+        </footer>
+        <div class="popup">
+            <div class="popup__window">
+                <button
+                    type="button"
+                    class="popup__close-button"
+                    aria-label="Закрыть"
+                ></button>
+                <form class="popup__form form" name="form">
+                    <h2 class="form__title">Редактировать профиль</h2>
+                    <input
+                        class="form__input form__input_name_title"
+                        name="title"
+                        type="text"
+                        placeholder="Введите имя"
+                        required
+                    />
+                    <input
+                        class="form__input form__input_name_subtitle"
+                        name="subtitle"
+                        type="text"
+                        placeholder="Введите должность"
+                        required
+                    />
+
+                    <button
+                        class="form__button"
+                        value="Сохранить"
+                        type="submit"
+                    >
+                        Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
         <script src="./js/script.js"></script>
     </body>
 </html>

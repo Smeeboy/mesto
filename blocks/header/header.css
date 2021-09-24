@@ -1,12 +1,19 @@
 .header {
     border-bottom: 1px solid rgba(84, 84, 84, .7);
-    opacity: 0.7;
     width: 100%;
+    margin-bottom: 38px;
 }
 
 @media screen and (max-width: 639px) {
     .header {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header {
+        border-bottom: none;
+        margin-bottom: 36px;
     }
 }

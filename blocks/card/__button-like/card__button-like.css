@@ -12,7 +12,7 @@
 
 .card__button-like:hover {
     opacity: 0.5;
-    transition: 0.4 ease-out;
+    transition: 0.4s ease-out;
 }
 
 .card__button-like:active {
