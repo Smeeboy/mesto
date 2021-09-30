@@ -77,9 +77,9 @@ addCardForm.addEventListener('submit', function(evt){
 const allCards =  document.querySelectorAll('.card');
 
 
-allCards.forEach(function(cardElement){
-    addCardEvents(cardElement)
-});
+// allCards.forEach(function(cardElement){
+//     addCardEvents(cardElement)
+// });
 
 
 const popupEl = document.querySelector('.popup');
