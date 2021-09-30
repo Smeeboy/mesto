@@ -1,17 +1,19 @@
-.card__button-like {
-    background-image: url("../../../images/like-disabled.svg");
+.button_action_delete {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    background-image: url("../../../images/card__delete.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 22px;
+    width: 19px;
     height: 19px;
     border: none;
     background-color: transparent;
     align-self: center;
     cursor: grab;
-    opacity: 1;
 }
 
-.card__button-like:hover {
-    opacity: 0.5;
+.button_action_delete:hover {
+    opacity: 0.6;
     transition: 0.4s ease-out;
 }

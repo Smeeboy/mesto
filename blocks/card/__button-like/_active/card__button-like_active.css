@@ -1,5 +1,5 @@
-.card__button-like {
-    background-image: url("../../../images/like-disabled.svg");
+.card__button-like_active {
+    background-image: url("../../../../images/like.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 22px;
@@ -9,9 +9,4 @@
     align-self: center;
     cursor: grab;
     opacity: 1;
-}
-
-.card__button-like:hover {
-    opacity: 0.5;
-    transition: 0.4s ease-out;
 }

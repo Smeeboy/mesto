@@ -43,7 +43,7 @@
             </section>
 
             <section class="page__container cards">
-                <div class="card">
+                <!-- <div class="card">
                     <picture class="card__pic">
                         <img
                             class="card__image"
@@ -148,13 +148,13 @@
                             aria-label="Поставить лайк"
                         ></button>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
         <footer class="page__container footer">
             <p class="footer__text">&#169; 2020 Mesto Russia</p>
         </footer>
-        <div class="popup">
+        <div class="popup popup_profile_edit">
             <div class="popup__window">
                 <button
                     type="button"
@@ -188,6 +188,66 @@
                 </form>
             </div>
         </div>
+
+        <div class="popup popup_add_card">
+            <div class="popup__window">
+                <button
+                    type="button"
+                    class="popup__close-button"
+                    aria-label="Закрыть"
+                ></button>
+                <form class="popup__form form" name="form" id="AddCardForm">
+                    <h2 class="form__title">Новое место</h2>
+                    <input
+                        class="form__input form__input_name_text"
+                        name="title"
+                        type="text"
+                        placeholder="Название"
+                        required
+                    />
+                    <input
+                        class="form__input form__input_name_link"
+                        name="link"
+                        type="text"
+                        placeholder="Ссылка на картинку"
+                        required
+                    />
+
+                    <button class="form__button" value="Создать" type="submit">
+                        Сохранить
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="popup popup_card_view">
+            <div class="popup__window popup__window_card_view">
+                <button
+                    type="button"
+                    class="popup__close-button"
+                    aria-label="Закрыть"
+                ></button>
+                <img class="popup__img" />
+                <div class="popup__text"></div>
+            </div>
+        </div>
+
+        <template id="card">
+            <div class="card">
+                <picture class="card__pic">
+                    <img class="card__image" alt="Куршская коса" />
+                    <button class="button button_action_delete"></button>
+                </picture>
+                <div class="card__like">
+                    <h2 class="card__title">Куршская коса</h2>
+                    <button
+                        class="card__button-like card__button-like_active"
+                        type="button"
+                    ></button>
+                </div>
+            </div>
+        </template>
+
         <script src="./js/script.js"></script>
     </body>
 </html>
