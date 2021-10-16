@@ -42,114 +42,7 @@
                 ></button>
             </section>
 
-            <section class="page__container cards">
-                <!-- <div class="card">
-                    <picture class="card__pic">
-                        <img
-                            class="card__image"
-                            alt="Куршская коса"
-                            src="./images/photo-grid__image-karachaevo.jpeg"
-                        />
-                    </picture>
-                    <div class="card__like">
-                        <h2 class="card__title">Куршская коса</h2>
-                        <button
-                            class="card__button-like"
-                            type="button"
-                        ></button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <picture class="card__pic">
-                        <img
-                            class="card__image"
-                            alt="Санкт-Петербург"
-                            src="./images/photo-grid__image-elbrus.jpeg"
-                        />
-                    </picture>
-                    <div class="card__like">
-                        <h2 class="card__title">Санкт-Петербург</h2>
-                        <button
-                            class="card__button-like"
-                            type="button"
-                            aria-label="Like"
-                        ></button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <picture class="card__pic">
-                        <img
-                            class="card__image"
-                            alt="Домбай"
-                            src="./images/photo-grid__image-dombay.jpeg"
-                        />
-                    </picture>
-                    <div class="card__like">
-                        <h2 class="card__title">Домбай</h2>
-                        <button
-                            class="card__button-like"
-                            type="button"
-                            aria-label="Like"
-                        ></button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <picture class="card__pic">
-                        <img
-                            class="card__image"
-                            alt="Сахалин"
-                            src="./images/photo-grid__image-sakhalin.jpeg"
-                        />
-                    </picture>
-                    <div class="card__like">
-                        <h2 class="card__title">Сахалин</h2>
-                        <button
-                            class="card__button-like"
-                            type="button"
-                            aria-label="Like"
-                        ></button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <picture class="card__pic">
-                        <img
-                            class="card__image"
-                            alt="Сочи"
-                            src="./images/photo-grid__image-sochi.jpeg"
-                        />
-                    </picture>
-                    <div class="card__like">
-                        <h2 class="card__title">Сочи</h2>
-                        <button
-                            class="card__button-like"
-                            type="button"
-                            aria-label="Like"
-                        ></button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <picture class="card__pic">
-                        <img
-                            class="card__image"
-                            alt="Байкал>"
-                            src="./images/photo-grid__image-baikal.jpeg"
-                        />
-                    </picture>
-                    <div class="card__like">
-                        <h2 class="card__title">Байкал</h2>
-                        <button
-                            class="card__button-like"
-                            type="button"
-                            aria-label="Поставить лайк"
-                        ></button>
-                    </div>
-                </div> -->
-            </section>
+            <section class="page__container cards"></section>
         </main>
         <footer class="page__container footer">
             <p class="footer__text">&#169; 2020 Mesto Russia</p>
@@ -161,23 +54,30 @@
                     class="popup__close-button"
                     aria-label="Закрыть"
                 ></button>
-                <form class="popup__form form" name="form">
+                <form class="popup__form form" name="form" novalidate>
                     <h2 class="form__title">Редактировать профиль</h2>
                     <input
                         class="form__input form__input_name_title"
+                        id="name-title"
+                        minlength="2"
+                        maxlength="40"
                         name="title"
                         type="text"
                         placeholder="Введите имя"
                         required
                     />
+                    <span id="name-title-error" class="error"></span>
                     <input
                         class="form__input form__input_name_subtitle"
+                        id="job-title"
+                        minlength="2"
+                        maxlength="200"
                         name="subtitle"
                         type="text"
                         placeholder="Введите должность"
                         required
                     />
-
+                    <span id="job-title-error" class="error"></span>
                     <button
                         class="form__button"
                         value="Сохранить"
@@ -196,24 +96,39 @@
                     class="popup__close-button"
                     aria-label="Закрыть"
                 ></button>
-                <form class="popup__form form" name="form" id="AddCardForm">
+                <form
+                    class="popup__form form"
+                    name="form"
+                    id="AddCardForm"
+                    novalidate
+                >
                     <h2 class="form__title">Новое место</h2>
                     <input
                         class="form__input form__input_name_text"
+                        id="place-title"
+                        minlength="2"
+                        maxlength="30"
                         name="title"
                         type="text"
                         placeholder="Название"
                         required
                     />
+                    <span id="place-title-error" class="error"></span>
                     <input
                         class="form__input form__input_name_link"
+                        id="place-link"
                         name="link"
-                        type="text"
+                        type="url"
                         placeholder="Ссылка на картинку"
                         required
                     />
-
-                    <button class="form__button" value="Создать" type="submit">
+                    <span id="place-link-error" class="error"></span>
+                    <button
+                        class="form__button form__button_invalid"
+                        value="Создать"
+                        type="submit"
+                        disabled
+                    >
                         Сохранить
                     </button>
                 </form>
@@ -247,7 +162,7 @@
                 </div>
             </div>
         </template>
-
+        <script src="./js/validation.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

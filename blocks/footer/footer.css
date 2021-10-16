@@ -1,16 +1,13 @@
 .footer {
-    margin-top: 48px;
+    display: flex;
+    justify-content:flex-start;
+    margin-top: auto;
+    padding-top: 48px;
     margin-bottom: 36px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    color: #545454;
 }
 @media screen and (min-width: 960px) {
     .footer {
-        font-size: 18px;
-        line-height: 22px;
-        margin-top: 67px;
+        padding-top: 67px;
         margin-bottom: 60px;
     }
 }

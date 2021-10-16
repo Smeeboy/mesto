@@ -1,0 +1,11 @@
+.form__button_invalid {
+    background-color: #fff;
+    color: black;
+    opacity: .2;
+    border: 1px solid black;
+}
+
+.form__button_invalid:hover {
+    opacity: .2;
+    cursor: not-allowed;
+}
