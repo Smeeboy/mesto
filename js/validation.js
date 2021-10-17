@@ -10,31 +10,11 @@ const hideError = (errorElement, inputElement, inputErrorClass) => {
 }
 
 
-const checkLengthValidity = inputElement => {
-    const min = inputElement.minLength;
-    const max = inputElement.maxLength;
-    if (min > 0 && !max) {
-        inputElement.setCustomValidity(`Вы пропустили это поле. Минимальная длина ${min} символов`)
-    } else if (!min && max > 0) {
-        inputElement.setCustomValidity(`Вы пропустили это поле. Максимальная длина ${max} символов`)
-    } else if (min > 0 && max > 0) {
-        inputElement.setCustomValidity(`Вы пропустили это поле. Длина текста от ${min} до ${max} символов `)
-    }
-};
-
-const checkUrlValidity = inputElement => {
-    if (inputElement.type === 'url') {
-        inputElement.setCustomValidity(`Введите адрес сайта.`);
-    }
-};
-
 const checkInputValidity = (formElement, inputElement, config) => {
     inputElement.setCustomValidity("");
     const isInputNotValid = !inputElement.validity.valid;
     const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
     if (isInputNotValid) {
-        checkLengthValidity(inputElement);
-        checkUrlValidity(inputElement);
         showError(errorElement, inputElement, config.inputErrorClass);
     } else {
         hideError(errorElement, inputElement, config.inputErrorClass);
@@ -65,6 +45,7 @@ const setEventListeners = (formElement, config) => {
 
     formElement.addEventListener('submit', (evt) => {
         evt.preventDefault()
+        toggleButtonState(submitButton, false, config.inactiveButtonClass);
     })
 };
 
@@ -87,24 +68,3 @@ const validationConfig = {
 enableValidation(validationConfig)
 
 
-function handleClosePopupClick(evt) {
-    const target = evt.target;
-    if (target.classList.contains('popup__close-button') || target.classList.contains('popup')) {
-        closePopup();
-    }
-}
-
-function openPopup(popUp) {
-    popUp.classList.add('popup_active');
-    page.addEventListener('click', handlerClosePopupClick);
-    document.addEventListener('keydown', closePopupKey)
-}
-
-function closePopup() {
-    const activePopup = document.querySelector('.popup_active');
-    if (activePopup) {
-        activePopup.classList.remove('popup_active');
-        page.removeEventListener('click', handlerClosePopupClick);
-        document.removeEventListener('keydown', closePopupKey)
-    };
-}
