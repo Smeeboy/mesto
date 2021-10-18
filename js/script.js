@@ -93,21 +93,24 @@ function setPopupInputValue() {
     jobInput.dispatchEvent(new Event('input', { bubbles: true }));
 };
 
-function openPopup(popup) {
-    popup.classList.add('popup_opened');
-    document.addEventListener('keydown', function (evt) {
-        if (evt.key === 'Escape') {
-            closePopup(document.querySelector('.popup_opened'));
-            document.removeEventListener('keydown', function () {
-                closePopup();
-            });
-        };
-    });
-};
 
-function closePopup(popup) {
-    popup.classList.remove('popup_opened');
-};
+function handlerKeydownClosePopup(evt) {
+    if (evt.key === 'Escape') {
+      closePopup(document.querySelector('.popup_opened'));
+    };
+  }
+  
+  function openPopup(popup) {
+      popup.classList.add('popup_opened');
+      document.addEventListener('keydown', handlerKeydownClosePopup);
+  };
+  
+  function closePopup(popup) {
+      popup.classList.remove('popup_opened');
+      document.removeEventListener('keydown', handlerKeydownClosePopup);
+  };
+
+
 
 function setProfileInputValue() {
     profileTitle.textContent = nameInput.value;

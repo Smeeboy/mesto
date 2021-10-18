@@ -7,5 +7,5 @@
 
 .form__button_invalid:hover {
     opacity: .2;
-    cursor: pointer;
+    cursor: not-allowed;
 }
