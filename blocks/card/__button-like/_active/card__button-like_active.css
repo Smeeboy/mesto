@@ -7,6 +7,6 @@
     border: none;
     background-color: transparent;
     align-self: center;
-    cursor: grab;
+    cursor: pointer;
     opacity: 1;
 }
