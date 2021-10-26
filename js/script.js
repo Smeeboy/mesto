@@ -1,4 +1,4 @@
-import Card from './card.js';
+import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
 const initialCards = [
@@ -147,15 +147,12 @@ popupCloseButtonEls.forEach(function (item) {
 const formSettings = {
     inputSelector: '.form__input',
     submitSelector: '.form__button',
-    inputErrorClass: 'popup__input_state_invalid', 
+    inputErrorClass: 'popup__input_state_invalid',
     inactiveButtonClass: 'form__button_invalid',
 }
 
-const profileEditFormValidator = new FormValidator (formSettings, profileEditForm, formSubmitHandler);
-profileEditFormValidator.enableValidation ();
+const profileEditFormValidator = new FormValidator(formSettings, profileEditForm, formSubmitHandler);
+profileEditFormValidator.enableValidation();
 
-const addCardFormValidator = new FormValidator (formSettings, addCardForm);
-addCardFormValidator.enableValidation ();
-
-
-
+const addCardFormValidator = new FormValidator(formSettings, addCardForm);
+addCardFormValidator.enableValidation();
