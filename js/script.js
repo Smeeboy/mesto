@@ -1,3 +1,6 @@
+import Card from './card.js';
+import FormValidator from './FormValidator.js';
+
 const initialCards = [
     {
         name: 'Архыз',
@@ -43,9 +46,9 @@ const pageEl = document.querySelector('.page');
 const leadTitleEl = document.querySelector('.form__button');
 const profileTitle = document.querySelector('.profile__title');
 const profileText = document.querySelector('.profile__text');
-const formElement = profilePopup.querySelector('.popup__form');
-const nameInput = formElement.querySelector('.form__input_name_title');
-const jobInput = formElement.querySelector('.form__input_name_subtitle');
+const profileEditForm = profilePopup.querySelector('.popup__form');
+const nameInput = profileEditForm.querySelector('.form__input_name_title');
+const jobInput = profileEditForm.querySelector('.form__input_name_subtitle');
 const allPopups = document.querySelectorAll('.popup');
 
 
@@ -56,34 +59,10 @@ function showImage(link, title) {
     openPopup(popupCardView);
 };
 
-function addCardEvents(cardElement) {
-    const deleteButton = cardElement.querySelector('.button_action_delete');
-    const likeButton = cardElement.querySelector('.card__button-like');
-    const cardImage = cardElement.querySelector('.card__image');
-    const cardTitle = cardElement.querySelector('.card__title').textContent;
-    deleteButton.addEventListener('click', function (evt) {
-        deleteButton.closest('.card').remove()
-    });
-    likeButton.addEventListener('click', function (evt) {
-        likeButton.classList.toggle('card__button-like_active')
-    });
-    cardImage.addEventListener('click', function (evt) {
-        showImage(cardImage.src, cardTitle);
-    });
-};
-
-function createCard(link, name) {
-    const cardElement = templateCardElement.querySelector('.card').cloneNode(true);
-    cardElement.querySelector('.card__image').src = link;
-    cardElement.querySelector('.card__image').alt = name;
-    cardElement.querySelector('.card__title').textContent = name;
-    addCardEvents(cardElement);
-    return cardElement
-}
-
 function addCard(link, name) {
-    const cardElement = createCard(link, name);
-    cardsElement.prepend(cardElement);
+    const card = new Card('#card', name, link);
+    card.onImageClick = showImage;
+    cardsElement.prepend(card.get());
 }
 
 function setPopupInputValue() {
@@ -96,20 +75,19 @@ function setPopupInputValue() {
 
 function handlerKeydownClosePopup(evt) {
     if (evt.key === 'Escape') {
-      closePopup(document.querySelector('.popup_opened'));
+        closePopup(document.querySelector('.popup_opened'));
     };
-  }
-  
-  function openPopup(popup) {
-      popup.classList.add('popup_opened');
-      document.addEventListener('keydown', handlerKeydownClosePopup);
-  };
-  
-  function closePopup(popup) {
-      popup.classList.remove('popup_opened');
-      document.removeEventListener('keydown', handlerKeydownClosePopup);
-  };
+}
 
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+    document.addEventListener('keydown', handlerKeydownClosePopup);
+};
+
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+    document.removeEventListener('keydown', handlerKeydownClosePopup);
+};
 
 
 function setProfileInputValue() {
@@ -117,10 +95,9 @@ function setProfileInputValue() {
     profileText.textContent = jobInput.value;
 };
 
-function formSubmitHandler(evt) {
-    evt.preventDefault();
+function formSubmitHandler(formElement) {
     setProfileInputValue();
-    closePopup(evt.target.closest('.popup'));
+    closePopup(formElement.closest('.popup'));
 }
 
 
@@ -165,4 +142,20 @@ popupCloseButtonEls.forEach(function (item) {
         closePopup(evt.target.closest('.popup'));
     });
 });
-formElement.addEventListener('submit', formSubmitHandler);
+// profileEditForm.addEventListener('submit', formSubmitHandler);
+
+const formSettings = {
+    inputSelector: '.form__input',
+    submitSelector: '.form__button',
+    inputErrorClass: 'popup__input_state_invalid', 
+    inactiveButtonClass: 'form__button_invalid',
+}
+
+const profileEditFormValidator = new FormValidator (formSettings, profileEditForm, formSubmitHandler);
+profileEditFormValidator.enableValidation ();
+
+const addCardFormValidator = new FormValidator (formSettings, addCardForm);
+addCardFormValidator.enableValidation ();
+
+
+
