@@ -24,7 +24,7 @@ export default class Card {
     }
 
     onImageClick() {
-        
+
     }
 
     _setEventListeners() {
