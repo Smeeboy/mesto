@@ -1,4 +1,4 @@
-class FormValidator {
+export default class FormValidator {
     constructor(settings, formElement, successCallback) {
         this._form = formElement;
         this._submit = this._form.querySelector(settings.submitSelector);
@@ -62,7 +62,6 @@ class FormValidator {
 
 }
 
-export {FormValidator}
 
 
 // const toggleButtonState = (button, isActive, inactiveButtonClass) => {
