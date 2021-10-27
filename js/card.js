@@ -47,4 +47,4 @@ export default class Card {
     _like() {
         this._likeBtn.classList.toggle('card__button-like_active')
     }
-}
+};
